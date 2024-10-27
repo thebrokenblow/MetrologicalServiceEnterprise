@@ -12,8 +12,5 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        var listEmployees = new ListEmployeesVM(new RepositoryEmployees(new()));
-        DataContext = listEmployees;
-        var list = listEmployees.GetEmployees().GetAwaiter();
     }
 }

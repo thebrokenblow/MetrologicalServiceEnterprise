@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AsyncLazy" Version="1.6.4" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MetrologicalServiceEnterprise.Model\MetrologicalServiceEnterprise.Model.csproj" />
   </ItemGroup>
 

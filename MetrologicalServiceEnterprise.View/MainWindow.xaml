@@ -5,9 +5,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MetrologicalServiceEnterprise.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:windowsViewModel="clr-namespace:MetrologicalServiceEnterprise.ViewModel.WindowsViewModel;assembly=MetrologicalServiceEnterprise.ViewModel"
     Title="MainWindow"
     Width="800"
     Height="450"
+    d:DataContext="{d:DesignInstance Type=windowsViewModel:MainWindowVM}"
     mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <ContentControl Content="{Binding NavigationService.BasePageVM}" />
+    </Grid>
 </Window>

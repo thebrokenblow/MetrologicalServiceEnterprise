@@ -3,6 +3,14 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:MetrologicalServiceEnterprise.View"
-    StartupUri="MainWindow.xaml">
-    <Application.Resources />
+    xmlns:pages="clr-namespace:MetrologicalServiceEnterprise.View.Pages"
+    xmlns:pagesViewModel="clr-namespace:MetrologicalServiceEnterprise.ViewModel.PagesViewModel;assembly=MetrologicalServiceEnterprise.ViewModel">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type pagesViewModel:ListEmployeesPageVM}">
+            <pages:ListEmployeesPage />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type pagesViewModel:AddEmployeePageVM}">
+            <pages:AddEmployeePage />
+        </DataTemplate>
+    </Application.Resources>
 </Application>

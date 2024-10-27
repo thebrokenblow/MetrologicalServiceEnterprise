@@ -3,6 +3,7 @@ using System;
 using MetrologicalServiceEnterprise.Model.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MetrologicalServiceEnterprise.Model.Migrations
 {
     [DbContext(typeof(MetrologicalServiceEnterpriseContext))]
-    partial class MetrologicalServiceEnterpriseContextModelSnapshot : ModelSnapshot
+    [Migration("20241027004245_ChiefIdNull")]
+    partial class ChiefIdNull
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

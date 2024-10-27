@@ -1,0 +1,59 @@
+﻿<UserControl
+    x:Class="MetrologicalServiceEnterprise.View.Pages.ListEmployeesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MetrologicalServiceEnterprise.View.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pagesViewModel="clr-namespace:MetrologicalServiceEnterprise.ViewModel.PagesViewModel;assembly=MetrologicalServiceEnterprise.ViewModel"
+    d:DataContext="{d:DesignInstance Type=pagesViewModel:ListEmployeesPageVM}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="White"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <DataGrid
+            Grid.Row="0"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            ItemsSource="{Binding RequestEmployees}">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    MaxWidth="200"
+                    Binding="{Binding FirstName}"
+                    Header="Имя" />
+                <DataGridTextColumn
+                    MaxWidth="200"
+                    Binding="{Binding LastName}"
+                    Header="Фамилия" />
+                <DataGridTextColumn
+                    MaxWidth="200"
+                    Binding="{Binding Patronymic}"
+                    Header="Отчество" />
+                <DataGridTextColumn
+                    MaxWidth="200"
+                    Binding="{Binding Email}"
+                    Header="E-mail" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="1">
+            <Button
+                Width="200"
+                Height="30"
+                Margin="10,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Command="{Binding NavigateToAddEmployeeCommand}">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Text="Добавить сотрудника"
+                    TextAlignment="Center" />
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

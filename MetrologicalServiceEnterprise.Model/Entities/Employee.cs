@@ -7,5 +7,5 @@ public class Employee
     public required string LastName { get; set; }
     public required string Patronymic { get; set; }
     public required string Email { get; set; }
-    public required int ChiefId { get; set; }
+    public required int? ChiefId { get; set; }
 }
