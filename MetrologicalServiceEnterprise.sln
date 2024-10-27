@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetrologicalServiceEnterprise.View", "MetrologicalServiceEnterprise.View\MetrologicalServiceEnterprise.View.csproj", "{DD3501DD-6EC3-4889-B5AE-CFFAA9E884BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetrologicalServiceEnterprise.ViewModel", "MetrologicalServiceEnterprise.ViewModel\MetrologicalServiceEnterprise.ViewModel.csproj", "{20BFF28F-5B5C-41C9-A71C-9BA60E36FBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetrologicalServiceEnterprise.Model", "MetrologicalServiceEnterprise.Model\MetrologicalServiceEnterprise.Model.csproj", "{D6C7098E-821E-4823-8F5D-B1A734FD408F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DD3501DD-6EC3-4889-B5AE-CFFAA9E884BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD3501DD-6EC3-4889-B5AE-CFFAA9E884BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD3501DD-6EC3-4889-B5AE-CFFAA9E884BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BFF28F-5B5C-41C9-A71C-9BA60E36FBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BFF28F-5B5C-41C9-A71C-9BA60E36FBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BFF28F-5B5C-41C9-A71C-9BA60E36FBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BFF28F-5B5C-41C9-A71C-9BA60E36FBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C7098E-821E-4823-8F5D-B1A734FD408F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C7098E-821E-4823-8F5D-B1A734FD408F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C7098E-821E-4823-8F5D-B1A734FD408F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C7098E-821E-4823-8F5D-B1A734FD408F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
