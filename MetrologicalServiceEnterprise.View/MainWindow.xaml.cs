@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using MetrologicalServiceEnterprise.Model.Repositories;
-using MetrologicalServiceEnterprise.ViewModel.PagesViewModel;
 
 namespace MetrologicalServiceEnterprise.View;
 

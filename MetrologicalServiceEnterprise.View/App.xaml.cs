@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using MetrologicalServiceEnterprise.ViewModel.Core;
 using MetrologicalServiceEnterprise.ViewModel.WindowsViewModel;
 using MetrologicalServiceEnterprise.ViewModel.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace MetrologicalServiceEnterprise.View;
 
@@ -21,13 +21,14 @@ public partial class App : Application
             DataContext = provider.GetService<MainWindowVM>()
         });
 
-        services.AddInjectionVM();
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-        services.AddSingleton<Func<Type, BasePageVM>>(
-            serviceProvider =>
-            viewModelType =>
-                (BasePageVM)serviceProvider.GetRequiredService(viewModelType));
+        var dbConnectionString = configuration.GetConnectionString("DbConnectionString");
 
+        services.AddInjectionVM(configuration);
         serviceProvider = services.BuildServiceProvider();
     }
 

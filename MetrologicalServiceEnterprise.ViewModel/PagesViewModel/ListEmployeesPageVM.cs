@@ -33,9 +33,10 @@ public partial class ListEmployeesPageVM : BasePageVM
     [RelayCommand]
     private async Task RequestEmployeesRangeAsync()
     {
-        RequestEmployees = await LoadEmployeesRangeAsync();
+        var employees = await LoadEmployeesRangeAsync();
+        RequestEmployees = new(employees);
     }
 
-    private async Task<List<Employee>> LoadEmployeesRangeAsync() =>
-         await _repositoryEmployees.GetRange(0, 10);
+    private async Task<IEnumerable<Employee>> LoadEmployeesRangeAsync() =>
+         await _repositoryEmployees.GetRangeAsync(0, 20);
 }

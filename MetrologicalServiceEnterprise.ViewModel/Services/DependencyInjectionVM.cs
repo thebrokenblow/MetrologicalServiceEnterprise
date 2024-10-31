@@ -5,12 +5,13 @@ using MetrologicalServiceEnterprise.ViewModel.WindowsViewModel;
 using MetrologicalServiceEnterprise.ViewModel.Services.Interfaces;
 using MetrologicalServiceEnterprise.ViewModel.Factories;
 using MetrologicalServiceEnterprise.ViewModel.Factories.Interfaces;
+using Microsoft.Extensions.Configuration;
 
 namespace MetrologicalServiceEnterprise.ViewModel.Services;
 
 public static class DependencyInjectionVM
 {
-    public static void AddInjectionVM(this IServiceCollection services)
+    public static void AddInjectionVM(this IServiceCollection services, IConfigurationRoot configuration)
     {
         services.AddTransient<MainWindowVM>();
         services.AddTransient<ListEmployeesPageVM>();
@@ -19,6 +20,6 @@ public static class DependencyInjectionVM
         services.AddSingleton<INavigationService, NavigationService>();
         services.AddSingleton<IFactoryPageVM, FactoryPageVM>();
 
-        services.AddInjectionModel();
+        services.AddInjectionModel(configuration);
     }
 }
